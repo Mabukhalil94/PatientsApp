@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Patients"
 include ':app'
+include ':data'
+include ':domain'
+include ':core'
+include ':presentation'
