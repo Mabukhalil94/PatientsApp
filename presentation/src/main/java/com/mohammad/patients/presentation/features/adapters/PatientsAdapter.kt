@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mohammad.patients.domain.model.patients.PatientsRemoteModel
 import com.mohammad.patients.presentation.databinding.RowPatientBinding
 
-class PatientsAdapter() :
-    ListAdapter<PatientsRemoteModel, PatientsAdapter.PatientsViewHolder>(DiffCallback) {
+class PatientsAdapter() : ListAdapter<PatientsRemoteModel, PatientsAdapter.PatientsViewHolder>(DiffCallback ) {
 
     var indexLastSelected=-1
 
@@ -55,19 +54,13 @@ class PatientsAdapter() :
 
     }
 
-    private object DiffCallback : DiffUtil.ItemCallback<PatientsRemoteModel>() {
-        override fun areItemsTheSame(
-            oldItem: PatientsRemoteModel,
-            newItem: PatientsRemoteModel
-        ): Boolean {
+    private object DiffCallback : DiffUtil.ItemCallback<PatientsRemoteModel>(){
+        override fun areItemsTheSame(oldItem: PatientsRemoteModel, newItem: PatientsRemoteModel): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(
-            oldItem: PatientsRemoteModel,
-            newItem: PatientsRemoteModel
-        ): Boolean {
-            return oldItem == newItem
+        override fun areContentsTheSame(oldItem: PatientsRemoteModel, newItem: PatientsRemoteModel): Boolean {
+            return  oldItem == newItem
         }
 
     }
