@@ -30,14 +30,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_margin="10dp"
-                app:layout_constraintDimensionRatio="4:3"
+                android:layout_marginTop="16dp"
                 android:scaleType="fitXY"
                 app:imageUrl="@{model.photo}"
+                app:layout_constraintDimensionRatio="4:3"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView"
                 tools:src="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_view_delete"
+                app:layout_constraintEnd_toEndOf="@+id/image_view_patient"
+                app:layout_constraintTop_toTopOf="@+id/image_view_patient"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_delete_24"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_patient_name"
