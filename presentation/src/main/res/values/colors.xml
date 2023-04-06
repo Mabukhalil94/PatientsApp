@@ -10,6 +10,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_primary_patients">#3F51B5</color>
     <color name="color_primary">#D1E7EF</color>
+    <color name="color_secondary">#22A1CF</color>
+    <color name="color_darker_gray">#5C5D5E</color>
 
 
 </resources>
