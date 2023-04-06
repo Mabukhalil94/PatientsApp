@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class GetPatientsUseCase @Inject constructor(private val repository: PatientsRepository) {
 
-    suspend fun invoke(): List<PatientsRemoteModel>{
-        return repository.getPatients()
+    suspend operator fun invoke(): List<PatientsRemoteModel>{
+        return repository.getPatients().sortedBy { it.PatientsName }
     }
 }

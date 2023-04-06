@@ -16,4 +16,11 @@
         android:id="@+id/addPatientFragment"
         android:name="com.mohammad.patients.presentation.features.add.AddPatientFragment"
         android:label="fragmentAddPatient"/>
+
+    <fragment
+        android:id="@+id/detailsPatientFragment"
+        android:name="com.mohammad.patients.presentation.features.details.DetailsPatientFragment"
+        android:label="DetailsPatientFragment"/>
+
+
 </navigation>
